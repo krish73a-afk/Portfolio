@@ -97,6 +97,38 @@ const $ = (selector, parent = document) => parent.querySelector(selector);
       });
     });
 
+    // Dated projects appear newest first. Undated concepts retain their original order.
+    const projectList = $('#project-list');
+    const projectToggle = $('#projects-toggle');
+    const projectCount = $('#projects-count');
+    const projectEntries = $$('.project-entry', projectList).sort((a, b) =>
+      (b.dataset.updated || '').localeCompare(a.dataset.updated || '')
+    );
+    projectEntries.forEach(project => projectList.appendChild(project));
+    const recentProjectLimit = 3;
+    let allProjectsVisible = false;
+    function updateProjectVisibility() {
+      projectEntries.forEach((project, index) => {
+        project.hidden = !allProjectsVisible && index >= recentProjectLimit;
+      });
+      const total = projectEntries.length;
+      const shown = allProjectsVisible ? total : Math.min(recentProjectLimit, total);
+      projectCount.textContent = allProjectsVisible
+        ? 'Showing all ' + total + ' projects and concepts'
+        : 'Showing ' + shown + ' of ' + total + ' · Most recent first';
+      projectToggle.hidden = total <= recentProjectLimit;
+      projectToggle.setAttribute('aria-expanded', String(allProjectsVisible));
+      projectToggle.innerHTML = allProjectsVisible
+        ? 'Show less <span aria-hidden="true">−</span>'
+        : 'Show more <span class="project-remaining">' + (total - shown) + '</span><span aria-hidden="true">+</span>';
+    }
+    projectToggle.addEventListener('click', () => {
+      allProjectsVisible = !allProjectsVisible;
+      updateProjectVisibility();
+      if (!allProjectsVisible) projectToggle.scrollIntoView({block: 'nearest'});
+    });
+    updateProjectVisibility();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
