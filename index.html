@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="projects.css"/>
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -84,7 +85,7 @@
           <span class="line">BREAK <span class="gold">LIMITS.</span></span>
         </h1>
         <div class="hero-sub reveal">
-          <p>I’m <strong style="color:var(--text)">Krish</strong> — a digital builder from Meerut who loves programming, AI/ML, web development, gaming, anime, and turning ambitious ideas into things people can actually use.</p>
+          <p>I’m <strong style="color:var(--text)">Krish</strong> — A Digital Builder from India. who loves Programming, AI/ML, Web Development, Gaming, Anime, and Turning Ambitious Ideas into Things People can Actually use.</p>
           <span class="hero-chip">FULL-STACK BUILDER · SOFTWARE · AI/ML</span>
         </div>
       </div>
@@ -168,39 +169,71 @@
         </div>
       </div>
     </section>
-    <section class="section" id="projects">
+    <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container projects-wrap">
-        <div class="eyebrow reveal">03 / Project lab</div>
-        <h2 class="section-title reveal">IDEAS THAT <em>DESERVE</em> A BUILD.</h2>
-        <p class="section-copy reveal">Some are active builds, some are concepts — the important part is that they start as questions and end up as prototypes.</p>
+        <div class="eyebrow reveal">03 / Projects</div>
+        <div class="projects-heading">
+          <h2 class="section-title reveal" id="projects-title">RECENT <em>BUILDS.</em><br>REAL POSSIBILITIES.</h2>
+          <a class="projects-github" href="https://github.com/krish73a-afk" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="section-copy reveal">Games, useful tools, and experiments — starting with my three most recently updated projects.</p>
 
-        <div class="project-list">
-          <article class="project reveal">
-            <div class="project-no">01</div>
-            <div>
-              <h3>Self PC Builder</h3>
-              <p>A web/app concept where users assemble a PC, get LLM-powered guidance, check compatibility and see whether their build can handle specific games or software. Includes product discovery and a visual “what happens if…” simulation layer.</p>
+        <div class="project-list" id="project-list">
+          <article class="project project-entry reveal" data-updated="2026-10-10" aria-labelledby="project-soul-title">
+            <div class="project-preview project-preview-soul">
+              <img src="assets/soul-encore-preview.jpg" width="1265" height="1644" alt="Soul Encore's fire and water fighters in the elemental arena" loading="lazy" decoding="async">
+              <span class="project-preview-label">BROWSER GAME / 1V1</span>
             </div>
-            <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19 19 5M8 5h11v11"/></svg></div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-state">Live game</span><time datetime="2026-10-10">10 OCT 2026</time></div>
+              <h3 id="project-soul-title">Soul Encore</h3>
+              <p>A browser fighting game with five elemental warriors, online duels, combos, dodges, and best-of-three rounds. Built for keyboard and touch, with shaded character art and recorded combat sounds.</p>
+              <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Canvas</span><span class="tag">WebRTC</span><span class="tag">Web Audio</span></div>
+            </div>
+            <a class="project-action" href="https://elegant-mochi-4e2175.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Soul Encore (opens in a new tab)">Play game <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project reveal">
-            <div class="project-no">02</div>
-            <div>
-              <h3>Creator Lab</h3>
-              <p>A growing playground for content ideas: anime, gaming, mystery formats, short-form storytelling, AI-assisted workflows, and experiments with turning audience attention into a repeatable creative system.</p>
+          <article class="project project-entry reveal" data-updated="2026-10-06" aria-labelledby="project-civic-title">
+            <div class="project-preview project-preview-civic" aria-hidden="true"><div class="civic-grid"></div><svg viewBox="0 0 80 80" fill="none"><path d="M40 8 64 18v19c0 17-15 29-24 35-9-6-24-18-24-35V18z" stroke="currentColor" stroke-width="2"/><path d="m29 39 8 8 16-18" stroke="currentColor" stroke-width="3"/></svg><span class="project-preview-label">CIVIC TECH / AI</span></div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-state">Open source</span><time datetime="2026-10-06">06 OCT 2026</time></div>
+              <h3 id="project-civic-title">Civic Sentinel</h3>
+              <p>AI-powered civic issue reporting with evidence photos, incident mapping, duplicate hints, and status tracking. Connecting community reports with a clearer view of what needs attention.</p>
+              <div class="tag-row"><span class="tag">Gemini</span><span class="tag">FastAPI</span><span class="tag">Firestore</span></div>
             </div>
-            <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19 19 5M8 5h11v11"/></svg></div>
+            <a class="project-action" href="https://github.com/krish73a-afk/civic-sentinel" target="_blank" rel="noopener noreferrer" aria-label="View Civic Sentinel on GitHub (opens in a new tab)">View code <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project reveal">
-            <div class="project-no">03</div>
-            <div>
-              <h3>AI-Powered Systems</h3>
-              <p>Combining full-stack development, programming, APIs and AI/ML to create products that solve real problems — not just another tutorial project.</p>
+          <article class="project project-entry reveal" data-updated="2026-10-01" aria-labelledby="project-portfolio-title">
+            <div class="project-preview project-preview-portfolio" aria-hidden="true"><span class="portfolio-mark">K<span>.</span></span><span class="project-preview-label">PERSONAL SPACE / WEB</span></div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-state">You're here</span><time datetime="2026-10-01">01 OCT 2026</time></div>
+              <h3 id="project-portfolio-title">Krish — Digital Portfolio</h3>
+              <p>My personal space on the web: a responsive portfolio with dark and light themes, motion, a project collection, and a look at the technologies and ideas I'm exploring.</p>
+              <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
             </div>
-            <div class="project-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19 19 5M8 5h11v11"/></svg></div>
+            <a class="project-action" href="https://github.com/krish73a-afk/Portfolio" target="_blank" rel="noopener noreferrer" aria-label="View Krish Digital Portfolio on GitHub (opens in a new tab)">View code <span aria-hidden="true">↗</span></a>
           </article>
+
+          <article class="project project-entry project-concept reveal" aria-labelledby="project-pc-title">
+            <div class="project-concept-mark" aria-hidden="true">01 / LAB</div>
+            <div class="project-content"><div class="project-meta"><span>Concept</span></div><h3 id="project-pc-title">Self PC Builder</h3><p>A web/app concept for assembling a PC with LLM-powered guidance, compatibility checks, product discovery, and a visual “what happens if…” simulation for games and software.</p></div>
+            <span class="project-planned">In the lab</span>
+          </article>
+          <article class="project project-entry project-concept reveal" aria-labelledby="project-creator-title">
+            <div class="project-concept-mark" aria-hidden="true">02 / LAB</div>
+            <div class="project-content"><div class="project-meta"><span>Creative experiments</span></div><h3 id="project-creator-title">Creator Lab</h3><p>A playground for anime, gaming, mystery formats, short-form storytelling, and AI-assisted workflows — exploring how ideas become a repeatable creative process.</p></div>
+            <span class="project-planned">In the lab</span>
+          </article>
+          <article class="project project-entry project-concept reveal" aria-labelledby="project-ai-title">
+            <div class="project-concept-mark" aria-hidden="true">03 / LAB</div>
+            <div class="project-content"><div class="project-meta"><span>Exploration</span></div><h3 id="project-ai-title">AI-Powered Systems</h3><p>Exploring how full-stack development, APIs, and AI/ML can come together in useful products that solve everyday problems.</p></div>
+            <span class="project-planned">In the lab</span>
+          </article>
+        </div>
+        <div class="projects-footer">
+          <p id="projects-count" role="status" aria-live="polite" aria-atomic="true">6 projects and concepts</p>
+          <button class="projects-toggle" id="projects-toggle" type="button" aria-expanded="false" aria-controls="project-list" hidden>Show more <span aria-hidden="true">+</span></button>
         </div>
       </div>
     </section>
@@ -248,8 +281,8 @@
               <!-- Replace these placeholder hrefs with your real profiles -->
               <a class="contact-btn" href="mailto:krish73a@gmail.com">Email <span>↗</span></a>
               <a class="contact-btn" href="https://github.com/krish73a-afk" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-              <a class="contact-btn" href="https://api.whatsapp.com/qr/H623OHZBQDPZA1?autoload=1&app_absent=0" target="_blank" rel="noreferrer">Whatsapp <span>↗</span></a>
-              <a class="contact-btn" href="https://instagram.com/itx._.krish?stkn=b2N3dXpjam9iZjF6" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+              <a class="contact-btn" href="https://www.instagram.com/itx._.krish?stkn=b2N3dXpjam9iZjF6" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+              <a class="contact-btn" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
             </div>
           </div>
         </div>
